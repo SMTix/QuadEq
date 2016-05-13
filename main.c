@@ -1,14 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-int main () {
-    float a, b, c;
-    printf( "Input coefficient's of equation (a, b, c)\n" );
-    scanf( "%f %f %f", &a, &b, &c );
-    process( a, b, c );
-    return 0;
-}
-
 void process ( float a, float b, float c ) {
     float D, x1, x2;
     if ( a == 0 ) {
@@ -23,4 +15,12 @@ void process ( float a, float b, float c ) {
     x2 = ( -b - sqrt(D) ) / ( 2 * a );
     printf ( " x1 = %f, x2 = %f\n", x1, x2 );
     }
+}
+
+int main () {
+    float a, b, c;
+    printf( "Input coefficient's of equation (a, b, c)\n" );
+    scanf( "%f %f %f", &a, &b, &c );
+    process( a, b, c );
+    return 0;
 }
